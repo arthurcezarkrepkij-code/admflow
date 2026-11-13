@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ADMflow</title>
+<meta name="description" content="ADMflow, o app do administrador da rede CacauFlow para celular e tablet. Protótipo demonstrativo com dados fictícios.">
+<meta name="theme-color" content="#241711">
+<meta name="color-scheme" content="light">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="ADMflow">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/admflow-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/admflow-192.png">
+<link rel="apple-touch-icon" href="icons/admflow-apple-180.png">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="app.css">
+<style>
+  /* regras fora de camadas, aplicadas antes do app carregar */
+  html, body { height: 100%; }
+  html { background: #241711; overscroll-behavior: none; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #241711; color: #241711; font-family: var(--font-sans, system-ui, sans-serif); font-size: 0.875rem; line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overscroll-behavior: none; -webkit-tap-highlight-color: transparent; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+  input, textarea { -webkit-user-select: text; user-select: text; }
+  #root:empty { min-height: 100vh; }
+  .boot { position: fixed; inset: 0; display: grid; place-items: center; background: #241711; }
+  .boot svg { width: 72px; height: 72px; animation: boot 1.4s ease-in-out infinite; }
+  @keyframes boot { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+  #root:not(:empty) + .boot { display: none; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<div class="boot" role="status" aria-label="Abrindo o ADMflow">
+  <svg viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="30" fill="#c8a46b"/><g transform="translate(60 62) scale(0.68) translate(-60 -62)"><g transform="rotate(30 60 62)"><path d="M60 17C60 10 63 5 69 2" stroke="#241711" stroke-width="6" fill="none" stroke-linecap="round"/><path d="M60 16C86 16 98 47 91 75C85 97 72 109 60 115C48 109 35 97 29 75C22 47 34 16 60 16Z" fill="#241711"/><path d="M49 19C40 48 44 87 60 117" stroke="#c8a46b" stroke-width="6.5" fill="none" stroke-linecap="round"/><path d="M71 19C80 48 76 87 60 117" stroke="#c8a46b" stroke-width="6.5" fill="none" stroke-linecap="round"/></g></g></svg>
+</div>
+<noscript><p style="padding:24px;font:15px system-ui;color:#f6ecdd">Ative o JavaScript para abrir o ADMflow.</p></noscript>
+<script src="app.js" defer></script>
+</body>
+</html>
